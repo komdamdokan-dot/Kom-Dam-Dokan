@@ -1,0 +1,11 @@
+﻿RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^product/([0-9]+)/([a-zA-Z0-9-]+)/?$ product.php?id=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^category/([a-zA-Z0-9-]+)/?$ category.php?slug=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([a-zA-Z0-9-]+)/?$ blog-detail.php?slug=$1 [QSA,L]
+Options -Indexes
